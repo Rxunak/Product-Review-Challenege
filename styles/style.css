@@ -1,3 +1,101 @@
 body {
   background-color: hsl(30, 38%, 92%);
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  width: 100%;
+  outline: none;
+  background-color: none;
+}
+
+.parentContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: -items;
+  height: 450px;
+  width: 600px;
+  outline: none;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.parentContainer .perfumeImage {
+  display: flex;
+  width: 300px;
+  height: 450px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.parentContainer .InfoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  padding: 1.3rem;
+}
+.parentContainer .InfoContainer .perfumeTitle {
+  font-family: "Montserrat", Times, serif;
+  letter-spacing: 10px;
+  font-size: 12px;
+  color: hsl(228, 12%, 48%);
+}
+.parentContainer .InfoContainer .perfumeName {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 90%;
+  font-family: "Fraunces", Times, serif;
+}
+.parentContainer .InfoContainer .perfumeDes {
+  font-family: "Montserrat", Times, serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 15px;
+  line-height: 150%;
+}
+.parentContainer .InfoContainer .perfumePrice {
+  font-family: "Fraunces", Times, serif;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: hsl(158, 36%, 37%);
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.parentContainer .InfoContainer .perfumePrice .lineThrough {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", Times, serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+.parentContainer .InfoContainer .button {
+  display: flex;
+  justify-content: center;
+}
+.parentContainer .InfoContainer .button .basketButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 15rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat", Times, serif;
+  font-weight: 600;
+}
+.parentContainer .InfoContainer .button .basketButton:hover {
+  background-color: hsl(158, 42%, 18%);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

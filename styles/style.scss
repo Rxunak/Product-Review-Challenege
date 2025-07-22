@@ -1,5 +1,115 @@
 @import "./variables";
 
-body{
-    background-color: $cream;
+@mixin flexbox(
+  $display: flex,
+  $justify-content: center,
+  $align-items: center,
+  $height: 100px,
+  $width: 100px,
+  $outline: 2px solid black,
+  $background: white
+) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  height: $height;
+  width: $width;
+  outline: $outline;
+  background-color: $background;
+}
+
+body {
+  background-color: $cream;
+}
+
+.mainContainer {
+  @include flexbox(flex, center, center, 97vh, 100%, none, none);
+}
+
+.parentContainer {
+  @include flexbox(flex, space-evenly, -items, 450px, 600px, none, white);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  .perfumeImage {
+    display: flex;
+    width: 300px;
+    height: 450px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .InfoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    padding: 1.3rem;
+
+    .perfumeTitle {
+      font-family: "Montserrat", Times, serif;
+      letter-spacing: 10px;
+      font-size: 12px;
+      color: $greyColor;
+    }
+
+    .perfumeName {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      line-height: 90%;
+      font-family: "Fraunces", Times, serif;
+    }
+
+    .perfumeDes {
+      font-family: "Montserrat", Times, serif;
+      color: $greyColor;
+      font-size: 15px;
+      line-height: 150%;
+    }
+
+    .perfumePrice {
+      font-family: "Fraunces", Times, serif;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: $greenColor;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      .lineThrough {
+        text-decoration: line-through;
+        color: $greyColor;
+        font-family: "Montserrat", Times, serif;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      .basketButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 15rem;
+        height: 2.8rem;
+        border-radius: 10px;
+        border: none;
+        background-color: $greenColor;
+        color: $white;
+        font-family: "Montserrat", Times, serif;
+        font-weight: 600;
+        &:hover {
+          background-color: $darkGreen;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
