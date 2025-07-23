@@ -23,7 +23,7 @@ body {
 }
 
 .mainContainer {
-  @include flexbox(flex, center, center, 97vh, 100%, none, transparent);
+  @include flexbox(flex, center, center, 97vh, 100%, none, transparent)
 }
 
 .parentContainer {
