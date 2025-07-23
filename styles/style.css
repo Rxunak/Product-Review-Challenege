@@ -14,8 +14,8 @@ body {
 
 .parentContainer {
   display: flex;
-  justify-content: space-evenly;
-  align-items: -items;
+  justify-content: center;
+  align-items: center;
   height: 450px;
   width: 600px;
   outline: none;
@@ -26,11 +26,14 @@ body {
   border-bottom-right-radius: 10px;
 }
 .parentContainer .perfumeImage {
-  display: flex;
   width: 300px;
   height: 450px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  display: block;
+}
+.parentContainer .mobile-image {
+  display: none;
 }
 .parentContainer .InfoContainer {
   display: flex;
@@ -98,4 +101,64 @@ body {
 .parentContainer .InfoContainer .button .basketButton:hover {
   background-color: hsl(158, 42%, 18%);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    outline: none;
+    background-color: none;
+  }
+  .parentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+    width: 350px;
+    outline: none;
+    background-color: white;
+    flex-direction: column;
+  }
+  .imageContainer {
+    height: 360px;
+    width: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .perfumeImage {
+    display: none !important;
+  }
+  .InfoContainer {
+    height: 400px !important;
+    width: 310px !important;
+  }
+  .InfoContainer .perfumeTitle {
+    font-size: 10px !important;
+  }
+  .InfoContainer .perfumeName {
+    font-size: 30px !important;
+  }
+  .InfoContainer .perfumeDes {
+    font-size: 14px !important;
+    font-weight: 500;
+  }
+  .InfoContainer .perfumePrice {
+    font-size: 30px !important;
+  }
+  .InfoContainer .basketButton {
+    width: 19rem !important;
+  }
+  .mobile-image {
+    display: block !important;
+    width: 350px;
+    height: 360px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

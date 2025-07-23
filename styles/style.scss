@@ -27,17 +27,22 @@ body {
 }
 
 .parentContainer {
-  @include flexbox(flex, space-evenly, -items, 450px, 600px, none, white);
+  @include flexbox(flex, center, center, 450px, 600px, none, white);
+
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   .perfumeImage {
-    display: flex;
     width: 300px;
     height: 450px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    display: block;
+  }
+
+  .mobile-image {
+    display: none;
   }
 
   .InfoContainer {
@@ -111,5 +116,68 @@ body {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    @include flexbox(flex, center, center, auto, auto, none, none);
+  }
+
+  .parentContainer {
+    @include flexbox(flex, center, center, 720px, 350px, none, white);
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    height: 360px;
+    width: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .perfumeImage {
+    display: none !important;
+  }
+
+  .InfoContainer {
+    height: 400px !important;
+    width: 310px !important;
+
+    .perfumeTitle {
+      font-size: 10px !important;
+    }
+
+    .perfumeName {
+      font-size: 30px !important;
+    }
+
+    .perfumeDes {
+      font-size: 14px !important;
+      font-weight: 500;
+    }
+
+    .perfumePrice {
+      font-size: 30px !important;
+    }
+
+    .button{
+        // outline: 2px solid black;
+    }
+
+    .basketButton{
+        // outline: 2px solid black;
+        width: 19rem !important;
+
+    }
+  }
+
+  .mobile-image {
+    display: block !important;
+    width: 350px;
+    height: 360px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 }
