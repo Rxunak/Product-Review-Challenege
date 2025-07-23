@@ -23,7 +23,7 @@ body {
 }
 
 .mainContainer {
-  @include flexbox(flex, center, center, 97vh, 100%, none, none);
+  @include flexbox(flex, center, center, 97vh, 100%, none, transparent);
 }
 
 .parentContainer {
@@ -121,7 +121,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .mainContainer {
-    @include flexbox(flex, center, center, auto, auto, none, none);
+    @include flexbox(flex, center, center, auto, auto, none, transparent);
   }
 
   .parentContainer {

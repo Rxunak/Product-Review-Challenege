@@ -9,7 +9,7 @@ body {
   height: 97vh;
   width: 100%;
   outline: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 .parentContainer {
@@ -111,7 +111,7 @@ body {
     height: auto;
     width: auto;
     outline: none;
-    background-color: none;
+    background-color: transparent;
   }
   .parentContainer {
     display: flex;
