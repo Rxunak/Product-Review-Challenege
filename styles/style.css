@@ -138,6 +138,9 @@ body {
   }
   .InfoContainer .perfumeTitle {
     font-size: 10px !important;
+    letter-spacing: 4px !important;
+    font-weight: 500;
+    padding-left: 5px;
   }
   .InfoContainer .perfumeName {
     font-size: 30px !important;

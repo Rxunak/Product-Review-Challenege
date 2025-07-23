@@ -51,7 +51,7 @@ body {
     width: 300px;
     height: 400px;
     padding: 1.3rem;
-    
+
     .perfumeTitle {
       font-family: "Montserrat", Times, serif;
       letter-spacing: 10px;
@@ -146,6 +146,9 @@ body {
 
     .perfumeTitle {
       font-size: 10px !important;
+      letter-spacing: 4px !important;
+      font-weight: 500;
+      padding-left: 5px;
     }
 
     .perfumeName {
@@ -161,12 +164,8 @@ body {
       font-size: 30px !important;
     }
 
-    
-
-    .basketButton{
-   
-        width: 19rem !important;
-
+    .basketButton {
+      width: 19rem !important;
     }
   }
 
